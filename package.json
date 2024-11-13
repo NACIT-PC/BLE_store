@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "using  bleutooth low energy devices, to  share in-store promotions.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^5.4.11"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.46.1"
   }
 }
