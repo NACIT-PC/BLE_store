@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>BLE_STORE</title>
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="item-grid">
+    <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+<div id="app"></div>
+<div class="container">
+    <div class="item-grid">
         <div class="item-card">
-          <img
-            src="https://images.pexels.com/photos/4182222/pexels-photo-4182222.jpeg"
-            alt=""
-          />
-          <div class="item-info">
-            <div class="info-top d-flex">
-              <p class="name">Jordarn 4</p>
-              <p class="price">$25.00</p>
+            <img
+                    src="https://images.pexels.com/photos/4182222/pexels-photo-4182222.jpeg"
+                    alt=""
+            />
+            <div class="item-info">
+                <div class="info-top d-flex">
+                    <p class="name">Jordarn 4</p>
+                    <p class="price">$25.00</p>
+                </div>
+                <h4>Shoe</h4>
+                <p>Business information</p>
+                <p class="brand">Jordarn</p>
+                <button id="deals" onclick="connect()">Find Deals</button>
             </div>
-            <h4>Shoe</h4>
-            <p>Business information</p>
-            <p class="brand">Jordarn</p>
-            <button id="deals" onclick="connect()">Find Deals</button>
-          </div>
         </div>
-      </div>
     </div>
-    <script type="module" src="./scripts/supabase.js"></script>
-    <script type="module" src="./scripts/ble.js" defer></script>
-  </body>
+</div>
+<script type="module" defer>
+	import {getProduct} from './src/main.js'
+
+	try {
+		const product = await getProduct('7794dda5-80ef-462e-81de-ba6915e56100')
+	} catch (err) {
+		console.error(err)
+	}
+</script>
+<script type="module" src="./scripts/ble.js" defer></script>
+</body>
 </html>
