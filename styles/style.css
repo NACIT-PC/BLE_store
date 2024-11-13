@@ -15,7 +15,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.divider {
+.dir {
     height: 3px;
     background-color: #008000;
 }
@@ -30,10 +30,11 @@ h2 {
 .item-card {
     padding-top: 0.2em;
     background: #fff;
-    border: 1px solid gray;
-    /* box-shadow: 1px 2px 15px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     overflow: hidden;
+    height: 650px;
     width: 30%;
+    border-radius: 40px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     justify-content: center;
     margin: auto;
@@ -49,8 +50,9 @@ h2 {
     width: 75%;
     border-radius: 2em;
     margin: auto;
+    margin-top: 40px;
     display: block;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
 }
 
@@ -65,6 +67,84 @@ h2 {
     font-size: 20px;
     margin-bottom: 10px;
     color: #2c3e50;
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.color {
+    color: #fff;
+}
+
+.cancel {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.fontsize {
+    font-size: 28px;
+}
+
+.fontlayout {
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+}
+
+.layout {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c3e50be;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.sublinks {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #2c3e50;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    transition: .5s;
+}
+
+.layout:hover {
+    background: #2c3e50f8;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.sublinks:hover {
+    color: #2c3e50;
+    font-size: medium;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btns {
+
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: baseline;
+    justify-self: center;
+
 }
 
 .item-info>button {
