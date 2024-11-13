@@ -1,8 +1,8 @@
-import { PUBLIC_SERVICE_UUID, PUBLIC_CHARACTERISTIC_UUID } from '$env/static/public';
-
 let device;
 let server;
 let characteristic;
+const PUBLIC_SERVICE_UUID = '';
+const PUBLIC_CHARACTERISTIC_UUID = '';
 
 /**
  * Send data to a BLE device.
@@ -35,8 +35,7 @@ export async function sendData(studentNumber) {
 export async function connect() {
 
 	device = await navigator.bluetooth.requestDevice({
-		filters: [{ name: 'NACIT IoT' }],
-		optionalServices: [PUBLIC_SERVICE_UUID]
+		acceptAllDevices: true,
 	});
 
 	server = await device.gatt.connect();
@@ -48,12 +47,24 @@ export async function connect() {
 
 }
 
-/**
- * Disconnects from a BLE device.
- * @param {BluetoothDevice} device - The device to disconnect.
- */
-export function disconnect(device) {
-	if (device) {
-		device.gatt.disconnect();
+// /**
+//  * Disconnects from a BLE device.
+//  * @param {BluetoothDevice} device - The device to disconnect.
+//  */
+// export function disconnect(device) {
+// 	if (device) {
+// 		device.gatt.disconnect();
+// 	}
+// }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+	async function handleClick() {
+		await connect();
 	}
-}
+
+	// Add event listeners here
+	document.getElementById('deals').addEventListener('click', handleClick);
+});
