@@ -19,28 +19,31 @@ h2 {
 .item-grid {
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
     gap: 20px;
 }
 .item-card {
+    padding-top: 0.2em;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid gray;
+    /* box-shadow: 1px 2px 15px 8px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
-    width: 40%;
+    width: 30%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     justify-content: center;
     margin: auto;
+    vertical-align: middle;
 }
 .item-card:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 .item-card>img {
-    width: 70%;
-    border-radius:4em ;
+    width: 75%;
+    border-radius:2em ;
     margin: auto;
     display: block;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 }
 .item-info {
@@ -86,4 +89,15 @@ h2 {
 }
 .item-card {
     animation: fadeIn 0.5s ease;
+}
+.close{
+    width: 100%;
+    justify-content: end;
+    display: flex;
+}
+.close>p{
+    width: 6em;
+    display: block;
+    text-align: center;
+    font-size: 1.4em;
 }
