@@ -15,12 +15,12 @@ export async function connect() {
 		acceptAllDevices: true,
 	});
 	
-	server = await device.gatt.connect();
-	
-	characteristic = await server
-		.getPrimaryService(PUBLIC_SERVICE_UUID)
-		.then((service) => service.getCharacteristic(PUBLIC_CHARACTERISTIC_UUID));
-	return device;
+	// server = await device.gatt.connect();
+	//
+	// characteristic = await server
+	// 	.getPrimaryService(PUBLIC_SERVICE_UUID)
+	// 	.then((service) => service.getCharacteristic(PUBLIC_CHARACTERISTIC_UUID));
+	// return device;
 	
 }
 
@@ -33,6 +33,20 @@ export async function connect() {
 // 		device.gatt.disconnect();
 // 	}
 // }
+
+// Check if Bluetooth is available
+if (navigator.bluetooth) {
+	try {
+		const availability = await navigator.bluetooth.getAvailability();
+		if (availability) {
+			console.log('Bluetooth is available');
+		} else {
+			console.log('Bluetooth is not available');
+		}
+	} catch (error) {
+		console.error('Error checking Bluetooth availability:', error);
+	}
+}
 
 
 document.addEventListener('DOMContentLoaded', () => {
