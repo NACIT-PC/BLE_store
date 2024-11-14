@@ -79,6 +79,9 @@ h2 {
 .color {
     color: #fff;
 }
+.font{
+    font-family: 'poppins',sans-serif;
+}
 
 .cancel {
     float: right;
@@ -127,7 +130,7 @@ h2 {
 .layout:hover {
     background: #2c3e50f8;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
+color: rgb(198, 219, 236);
 }
 
 .sublinks:hover {

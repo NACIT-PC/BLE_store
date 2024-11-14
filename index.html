@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLE_STORE</title>
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="item-grid">
-        <div class="item-card">
-          <img
-            src="https://images.pexels.com/photos/4182222/pexels-photo-4182222.jpeg"
-            alt=""
-          />
-          <div class="item-info">
-            <div class="info-top d-flex">
-              <p class="name">Jordarn 4</p>
-              <p class="price">$25.00</p>
-            </div>
-            <h4>Shoe</h4>
-            <p>Business information</p>
-            <p class="brand">Jordarn</p>
-            <button id="deals" onclick="connect()">Find Deals</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLE_STORE</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="item-grid">
+      <div class="item-card">
+        <div class="cancel">
+          <i class="fa-sharp fa-solid fa-xmark fontsize"></i>
+        </div>
+        <img src="Images/adidas Samba OG Shoes - Black _ Free Shipping with adiClub _ adidas US.jpg" alt="" />
+        <div class="item-info">
+          <div class="info-top d-flex">
+            <p class="name fontlayout">Addidas Samba</p>
+            <p class="price">$25.00</p>
           </div>
+          <h4>Shoe</h4>
+          <p>The Samba stands as a testament to the brand's dedication to innovation and style. What began as a
+            specialized football shoe for icy pitches in Germany has evolved into an iconic symbol of fashion and
+            sportswear culture worldwide.</p>
+          <p class="brand font">Addidas</p>
+          <!-- the buttons-->
+          <div class="btns flexbox">
+            <button id="deals" class="layout fontlayout" onclick="connect()">Shop Now!</button>
+            <button id="deals" class="sublinks fontsize" onclick="connect()">Look for More</button>
+          </div>
+
         </div>
       </div>
     </div>
-    <script type="module" src="./scripts/supabase.js"></script>
-    <script type="module" src="./scripts/ble.js" defer></script>
-  </body>
+  </div>
+  <script type="module" src="./scripts/supabase.js"></script>
+  <script type="module" src="./scripts/ble.js" defer></script>
+</body>
+
 </html>
